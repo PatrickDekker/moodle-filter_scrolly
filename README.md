@@ -53,6 +53,3 @@ type: "accordion"
 title: "My accordion"
 items: "Item 1::Content 1||Item 2::Content 2||Item 3::Content 3"
 [/scrolly]
-falselabel: "False"
-resetlabel: "Try again"
-[/scrolly]
