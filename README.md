@@ -36,6 +36,9 @@ correct: "false"
 correctfeedback: "Correct! The Earth is round."
 incorrectfeedback: "Not correct. The Earth is not flat."
 truelabel: "True"
+falselabel: "False"
+resetlabel: "Try again"
+[/scrolly]
 
 [scrolly]
 type: "multichoice"
