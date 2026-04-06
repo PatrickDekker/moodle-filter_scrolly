@@ -1,0 +1,159 @@
+/* ==================================================
+   SCROLLY BLOCK (shared styles for all question types)
+================================================== */
+
+.scrolly-block {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.scrolly-block p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Buttons */
+.scrolly-block button {
+    padding: 6px 12px;
+    margin-right: 8px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.scrolly-block button:hover {
+    background-color: #eee;
+}
+
+.scrolly-block button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Feedback */
+.scrolly-feedback {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.scrolly-block.correct .scrolly-feedback {
+    color: green;
+}
+
+.scrolly-block.incorrect .scrolly-feedback {
+    color: red;
+}
+
+/* Prevent label color inheritance issues */
+.scrolly-block label {
+    color: inherit;
+}
+
+/* Selected radio styling */
+.scrolly-options label input[type="radio"]:checked + span {
+    font-weight: bold;
+}
+
+
+/* ==================================================
+   ACCORDION
+================================================== */
+
+/* Container */
+.scrolly-accordion {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+}
+
+/* Optional title */
+.scrolly-accordion-title {
+    padding: 12px 15px;
+    font-weight: 600;
+    font-size: 16px; /* same as items */
+    background: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Item */
+.scrolly-accordion-item {
+    border-bottom: 1px solid #eee;
+}
+
+.scrolly-accordion-item:last-child {
+    border-bottom: none;
+}
+
+
+/* --------------------------------------------------
+   HEADER (clickable area)
+-------------------------------------------------- */
+
+.scrolly-accordion-toggle {
+    width: 100%;
+    padding: 14px 16px;
+    cursor: pointer;
+    font-size: 16px;
+
+    display: flex;
+    align-items: center;   /* vertical alignment */
+    gap: 12px;             /* space between icon and text */
+
+    background: #fff;
+    transition: background 0.2s ease;
+}
+
+.scrolly-accordion-toggle:hover {
+    background: #f7f7f7;
+}
+
+
+/* --------------------------------------------------
+   LEFT CHEVRON
+-------------------------------------------------- */
+
+/* Add chevron BEFORE the text */
+.scrolly-accordion-toggle::before {
+    content: "";
+    
+    width: 10px;
+    height: 10px;
+
+    border-right: 2px solid #555;
+    border-bottom: 2px solid #555;
+
+    transform: rotate(-45deg); /* looks like ">" */
+    transition: transform 0.2s ease;
+
+    display: inline-block;
+}
+
+/* Rotate when open (points down) */
+.scrolly-accordion-item.active .scrolly-accordion-toggle::before {
+    transform: rotate(45deg);
+}
+
+
+/* --------------------------------------------------
+   CONTENT
+-------------------------------------------------- */
+
+/* Hidden by default */
+.scrolly-accordion-content {
+    display: none;
+    padding: 14px 16px;
+    background: #fafafa;
+    font-size: 15px;
+    line-height: 1.5;
+    border-top: 1px solid #ddd;
+}
+
+/* Show when active */
+.scrolly-accordion-item.active .scrolly-accordion-content {
+    display: block;
+}
